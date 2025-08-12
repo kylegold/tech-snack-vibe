@@ -1,0 +1,19 @@
+Preview Image Note
+==================
+
+A preview thumbnail image (preview.png) should be created for this command.
+
+Suggested image content:
+- A modern design system visualization
+- Include visual elements like:
+  - Color palette swatches
+  - Typography samples
+  - Component examples (buttons, cards)
+  - Mobile device mockup
+  - Design grid/guidelines
+- Use a sophisticated color scheme (purples, blues, whites)
+- Show both design specs and code output
+- Dimensions: 1200x630px (social media friendly)
+- Format: PNG with transparency
+
+The image should convey that this is a professional design system generator.

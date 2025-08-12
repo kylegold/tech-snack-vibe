@@ -1,0 +1,112 @@
+# Commands.com Repository Configuration
+# UI Style Guide Generator Command
+
+commands:
+  - name: ui-style-guide-generator
+    title: UI Style Guide Generator
+    description: Comprehensive UI/UX design system generator that creates style guides from image analysis and transforms app concepts into production-ready design specifications with component libraries
+    type: command
+    category: development
+    commandName: /ui-style-guide-generator
+    aiPlatform: claude-code@2025.06
+    content: ui-style-guide-generator/command.md
+    readme: ui-style-guide-generator/README.md
+    license: MIT
+    mcpRequirements:
+      - serverId: docker-filesystem
+        tier: required
+        name: Filesystem
+      - serverId: frame0-mcp-server
+        tier: optional
+        name: Frame0
+    inputParameters:
+      - name: task
+        label: Design Task
+        description: Type of design task to perform
+        type: select
+        required: false
+        defaultValue: analyze-images
+        options:
+          - analyze-images
+          - create-from-concept
+          - generate-ui
+          - product-spec
+          - full-workflow
+      - name: design_source
+        label: Design Source
+        description: Source of design input
+        type: select
+        required: false
+        defaultValue: image-analysis
+        options:
+          - image-analysis
+          - app-concept
+          - existing-guide
+      - name: output_format
+        label: Output Format
+        description: Desired output format for the design system
+        type: select
+        required: false
+        defaultValue: style-guide
+        options:
+          - style-guide
+          - ui-components
+          - html-prototype
+          - product-spec
+          - full-system
+      - name: app_name
+        label: App Name
+        description: Name of your application
+        type: text
+        required: false
+        defaultValue: ""
+      - name: app_description
+        label: App Description
+        description: Brief description of your app concept
+        type: text
+        required: false
+        defaultValue: ""
+      - name: target_platform
+        label: Target Platform
+        description: Platform to optimize the design for
+        type: select
+        required: false
+        defaultValue: cross-platform
+        options:
+          - ios
+          - android
+          - web
+          - cross-platform
+      - name: design_style
+        label: Design Style
+        description: Visual style preference for the design
+        type: select
+        required: false
+        defaultValue: modern
+        options:
+          - modern
+          - minimal
+          - playful
+          - professional
+          - custom
+      - name: include_pondering
+        label: Include Design Thinking
+        description: Include thoughtful design analysis and rationale
+        type: select
+        required: false
+        defaultValue: "yes"
+        options:
+          - "yes"
+          - "no"
+
+repository:
+  license: MIT
+  description: UI/UX design system generator for Commands.com
+
+metadata:
+  created: "2025-08-12"
+  updated: "2025-08-12"
+  total_commands: 1
+  supported_platforms:
+    - claude-code
+    - claude
